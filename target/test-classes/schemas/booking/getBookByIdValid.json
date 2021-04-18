@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "firstname": "Mark",
+      "lastname": "Brown",
+      "totalprice": 593,
+      "depositpaid": true,
+      "bookingdates": {
+        "checkin": "2018-06-16",
+        "checkout": "2020-01-01"
+      }
+    }
+  ],
+  "required": [
+    "firstname",
+    "lastname",
+    "totalprice",
+    "depositpaid",
+    "bookingdates"
+  ],
+  "properties": {
+    "firstname": {
+      "$id": "#/properties/firstname",
+      "type": "string",
+      "title": "The firstname schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Mark"
+      ]
+    },
+    "lastname": {
+      "$id": "#/properties/lastname",
+      "type": "string",
+      "title": "The lastname schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Brown"
+      ]
+    },
+    "totalprice": {
+      "$id": "#/properties/totalprice",
+      "type": "integer",
+      "title": "The totalprice schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        593
+      ]
+    },
+    "depositpaid": {
+      "$id": "#/properties/depositpaid",
+      "type": "boolean",
+      "title": "The depositpaid schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "bookingdates": {
+      "$id": "#/properties/bookingdates",
+      "type": "object",
+      "title": "The bookingdates schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "checkin": "2018-06-16",
+          "checkout": "2020-01-01"
+        }
+      ],
+      "required": [
+        "checkin",
+        "checkout"
+      ],
+      "properties": {
+        "checkin": {
+          "$id": "#/properties/bookingdates/properties/checkin",
+          "type": "string",
+          "title": "The checkin schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "2018-06-16"
+          ]
+        },
+        "checkout": {
+          "$id": "#/properties/bookingdates/properties/checkout",
+          "type": "string",
+          "title": "The checkout schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "2020-01-01"
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
