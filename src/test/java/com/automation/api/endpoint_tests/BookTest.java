@@ -32,7 +32,6 @@ public class BookTest {
     public void setUp()  {
         Configuration config = ConfigFactory.create(Configuration.class);
         baseURI = config.baseURI();
-
     }
 
     @BeforeClass
@@ -68,8 +67,6 @@ public class BookTest {
                 .path("token");
 
         System.out.println(token);
-
-
     }
 
     @Test

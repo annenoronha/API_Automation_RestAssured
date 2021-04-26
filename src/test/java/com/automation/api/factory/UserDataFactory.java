@@ -9,7 +9,12 @@ public class UserDataFactory {
         useradmin.setUsername("admin");
         useradmin.setPassword("password123");
         return useradmin;
+    }
 
-
+    public static UserAuth authUserAdminIncorrectCredentials(){
+        UserAuth useradminfailed = new UserAuth();
+        useradminfailed.setUsername("admin");
+        useradminfailed.setPassword("password123456");
+        return useradminfailed;
     }
 }

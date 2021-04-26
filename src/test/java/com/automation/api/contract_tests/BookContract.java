@@ -5,9 +5,7 @@ import com.automation.api.pojo.Booking;
 import io.restassured.http.ContentType;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.Test;
-
 import java.io.IOException;
-
 import static io.restassured.RestAssured.*;
 import static io.restassured.module.jsv.JsonSchemaValidator.*;
 

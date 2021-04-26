@@ -11,9 +11,7 @@ import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
-
 import java.io.IOException;
-
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
@@ -108,7 +106,7 @@ public class BookTestScenarios {
                 .delete("/booking/"+ bookId)
         .then()
                 .assertThat()
-                    .statusCode(200)
+                    .statusCode(201)
                     .statusLine(containsString("Created"))
                 .log()
                     .all();
@@ -126,6 +124,5 @@ public class BookTestScenarios {
                     .statusLine(containsString("Not Found"))
                 .log()
                     .all();;
-
     }
 }
