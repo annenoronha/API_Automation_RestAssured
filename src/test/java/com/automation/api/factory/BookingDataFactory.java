@@ -1,13 +1,14 @@
 package com.automation.api.factory;
-
 import com.automation.api.pojo.Booking;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import com.tngtech.java.junit.dataprovider.*;
+import org.junit.runner.RunWith;
 import java.io.IOException;
 
+@RunWith(DataProviderRunner.class)
 public class BookingDataFactory {
+
 
     public static Booking createNewBook() throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
@@ -21,6 +22,6 @@ public class BookingDataFactory {
         updatebookinfo.setLastname("Caroline");
         return updatebookinfo;
 
-
     }
+
 }
